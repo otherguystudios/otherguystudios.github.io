@@ -1,1 +1,18 @@
+<html><head></head><body style="font-size: 2em; font-family: Charter Arial;">
+    <div style="display:flex; flex-direction:row; position: fixed; left: 0; right: 0; bottom:0; top: 0; z-index:-1;">
+      <div style="width: 33vw; background-color: yellow;">.</div>
+      <div style="width: 33vw; background-color: yellow;">.</div>
+      <div style="width: 33vw; background-color: yellow">.</div>
+    </div>
+    
+    <div style="background-color: yellow;">
+      <h1>My Web Page</h1>
+      <p>Welcome to my web page.  I hope you enjoy your stay.</p>
+    </div>
+    <p>
+      HI MY NAME IS <a href="https://www.roblox.com/users/1021169979/profile">Otherguy2222</a>. THIS IS MY WEBSITE
+    </p>
+  
 
+
+</body></html>
