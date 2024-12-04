@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <style>
+        .blink {
+            animation: blink-animation 1s steps(5, start) infinite;
+        }
+
+        @keyframes blink-animation {
+            0%, 100% {
+                visibility: visible;
+            }
+            50% {
+                visibility: hidden;
+            }
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="5;url=/home.html">
     <title>Redirecting...</title>
 </head>
  <body style="background-color:yellow;font-size: 2em; font-family: Charter Arial;">
-    <blink>Redirecting you to the home page... this page is being reworked a temp home page is here for now</blink>
+    <p class="blink">Redirecting you to the home page... this page is being reworked a temp home page is here for now</p>
 </body>
 </html>
