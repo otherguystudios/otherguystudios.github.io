@@ -1,0 +1,11 @@
+ul {
+    /* background: rgba(255,255,255,0.5); */
+    display: flex;
+    flex-direction: row;
+    border: solid black 2px;
+}
+
+li {
+    padding: 1em;
+    list-style: none;
+}
