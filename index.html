@@ -1,40 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <style>
-        .blink {
-            animation: blink-animation 1s steps(5, start) infinite;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loading cube powerd by Three.js</title>
+  <style>
+    body { 
+      margin: 0; 
+      background: black;
+      color: white;
+      text-align: center;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
 
-        @keyframes blink-animation {
-            0%, 100% {
-                visibility: visible;
-            }
-            50% {
-                visibility: hidden;
-            }
-        }
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="10;url=/home.html">
-    <title>Welcome to otherguystudios</title>
+    h1 {
+      font-size: 4em;
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    canvas {
+      display: inline-block;
+    }
+
+    #cuber {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+
+
+  </style>
 </head>
-<body style="background-color:rgb(255, 255, 255);font-size: 2em; font-family: Charter Arial;"></body>
-    <h2 class="blink">Redirecting you to the home page... </h2>
+<body>
+  <H1> OTHERGUY STUDIOS</H1>  
 
-    <h2>News:</h2>
-<h2> A new page showing updates/plans click <a href="/updates/Updates_planes.html">"Here!"</a> </h2>
+  <h2 id="countdown">
+    10
+  </h2>
+  <script type="text/javascript">
+    const el = document.getElementById('countdown')
+    let count = 10;
+    const counter = setInterval(function() { 
+      count = count - 1;
 
-<!-- <h2> Go check out the    <a href="archive/Archive.html">Archive</a>  </h2> -->
+      el.innerHTML = count + ""  
 
+      if(count === 0) {
+        clearInterval(counter)
+        window.location = '/home.html'
+      }
+    }, 1000)
+  </script>
+  <div id="cuber">
+  </div>
 
-<h2>The Blog has been removed <a href="/updates/Blog_removed.html">Learn more</a></h2>
+  
 
+<!-- Include the Three.js library from a CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+  // Scene setup
+  const scene = new THREE.Scene();
 
+  // Camera setup (field of view, aspect ratio, near and far clipping planes)
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  
+  // WebGL Renderer setup
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+  document.getElementById('cuber').appendChild(renderer.domElement);
 
+  // Create a cube
+  const geometry = new THREE.BoxGeometry();
 
-<h2>dont got the time <a href="home.html">Go Home</a> faster</h2> 
+  const material = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+  const cube = new THREE.Mesh(geometry, material);
+  scene.add(cube);
 
+  // Move the camera back so we can see the cube
+  camera.position.z = 2;
+
+  // Animation loop
+  function animate() {
+    requestAnimationFrame(animate);
+
+    // Rotate the cube for animation
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+
+    // Render the scene from the camera's perspective
+    renderer.render(scene, camera);
+  }
+
+  // Start the animation
+  animate();
+
+  // Handle window resizing
+  window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  });
+</script>
+<h2>If you are stuck on this page press refresh</h2>
+<h2>if its still not loading press <a href="home.html">This</a></h2>
+
+<h2>ARE YOU OLD SCHOOL CLICK HERE TO GO TO THE OLD LOADING <a href="old_index.html">PAGE!</a> </h2>
 </body>
-</html>
+</htm
