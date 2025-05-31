@@ -1,5 +1,8 @@
-<html>
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Otherguystudios: Home</title>
 
   <!-- Open Graph (og) share settings. title/description/photo  -->
@@ -12,45 +15,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="/favicon.png"/>
   <link rel="stylesheet" type="text/css" href="/style.css" />
+
+  <style>
+    /* Add some basic styling for the countdown timer */
+    #timer {
+      font-size: 2em;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body style="background-color:rgb(246, 255, 0);font-size: 2em; font-family: Charter, Arial;">
+
+  <h1>My Web Page</h1>
+  <p>Welcome to my web page. I hope you enjoy your stay.</p>
+
+  <p>
+    HI MY NAME IS <a href="https://www.roblox.com/users/1021169979/profile">Otherguy2222</a>. THIS IS MY WEBSITE
+  </p>
+
+  <h2>Pages</h2>
+  <hr/>       
+
+  <ul>
+    <li><a href="Roblox.html">Roblox</a></li>
+    <li><a href="/updates/Updates_planes.html">Updates/Plans</a></li>
+  </ul>
+
+  <!-- Countdown Timer Display -->
+<!--
   
- </head>
- <body style="background-color:rgb(246, 255, 0);font-size: 2em; font-family: Charter Arial;"></body>
+ <div id="timer">
+    <h2>Something new is in the works!:</h2>
+    <p id="countdown"></p>
+  </div>
 
-    <h1>My Web Page</h1>
-      <p>Welcome to my web page.  I hope you enjoy your stay.</p>
-    </div>
-    <p>
-      HI MY NAME IS <a href="https://www.roblox.com/users/1021169979/profile">Otherguy2222</a>. THIS IS MY WEBSITE
-    </p>
-       
-      <h2>Pages</h2>
+   <script>
+    // Set the date we're counting down to
+    var countdownDate = new Date("April 8, 2025 14:50:00").getTime();
 
-       <hr/>       
-       <img src"http://127.0.0.1:8080/piture-of-pomni.png" />
+    // Update the countdown every 1 second
+    var x = setInterval(function() {
 
-       <ul>
-        <li>   
-          <a href="Roblox.html">Roblox</a> 
-        <!-- </li><li> -->
-          <!-- <a href="page_coming_soon.html">Youtube</a>  -->
-        </li><li>
-           <!-- <a href="archive/Archive.html">Archive</a>  -->
-        </li><li>
-          <a href="/updates/Updates_planes.html">Updates/Plans</a> 
+      // Get the current time
+      var now = new Date().getTime();
+      
+      // Calculate the distance between now and the countdown date
+      var distance = countdownDate - now;
+      
+      // Time calculations for days, hours, minutes, and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-           <!-- <a href="otherguystudios.com/page_coming_soon">Doom</a>  -->
-        </li> 
-      </ul>
-  
+      // Display the result in the element with id="countdown"
+      document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
+      // If the countdown is finished, display a message
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "Please refresh the page to see the new updates!";
+      }
+    }, 1000);
+  </script> --> 
 
-
-
-
-   
- </body>
-
-
-  
-  
+</body>
 </html>

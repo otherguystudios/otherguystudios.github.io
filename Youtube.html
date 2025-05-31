@@ -1,9 +1,74 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Badeen+Display&family=Bytesized&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    
+    <style>
+      #latest_video {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      #timer {
+        background: rgb(0, 234, 255);
+        text-align: center;
+      }
+      #countdown {
+        font-family: "Sixtyfour Convergence", sans-serif;
+        color: rgb(255, 255, 255);
+
+      }
+    </style>
 
 </head>
 <body style="background-color:yellow;font-size: 2em; font-family: Charter Arial;">
 
-<video style="width: 100%" controls src="Video_test.mp4"></video>
+
+<div id="latest_video">
+  <h2>Latest video!</h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/yxvRK-sO4M0?si=5kWpF7BQdS4PYyo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div id="timer">
+    <h2>2 line redmon downtown rippon cutting.</h2>
+    <p id="countdown"></p>
+  </div>
+</div>
+  
+
+
+
+
+  <script>
+  // Set the date we're counting down to
+  var countdownDate = new Date("May 10, 2025 10:30:00").getTime();
+  // var countdownDate = new Date().getTime() + 10000;
+
+  // Update the countdown every 1 second
+  var x = setInterval(function() {
+
+    // Get the current time
+    var now = new Date().getTime();
+    
+    // Calculate the distance between now and the countdown date
+    var distance = countdownDate - now;
+    
+    // Time calculations for days, hours, minutes, and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="countdown"
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    // If the countdown is finished, display a message
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "Please refresh the page to see the latest video!";
+    }
+  }, 1000);
+  </script> 
+  </body>
 </html>
