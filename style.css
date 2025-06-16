@@ -1,29 +1,52 @@
+:root {
+    --bright-yellow: #FFEB3B;
+    --dark-text: #212121;
+    --lighter-yellow: #FFF176;
+    --golden-yellow: #FBC02D;
+    --medium-yellow: #FFEE58;
+    --soft-yellow: #FFF59D;
+}
+
+svg {
+    position:relative;
+    z-index: 1000; /* Ensure SVG is above other elements */
+}
+
+body {
+    background-color: var(--bright-yellow); /* Bright yellow background */
+    color: var(--dark-text); /* Dark text for contrast */
+}
+
+h1 {
+    background-color: var(--golden-yellow); /* Golden yellow for headings */
+}
+
+ul {
+    background-color: var(--lighter-yellow); /* Lighter yellow for the list background */
+    border: 2px solid var(--golden-yellow); /* Golden yellow border */
+}
+
+li {
+    background-color: var(--medium-yellow); /* Medium yellow for list items */
+    color: var(--dark-text); /* Dark text for readability */
+    border: 1px solid var(--golden-yellow); /* Golden yellow border */
+    padding: 1em;
+    list-style: none;
+}
+
+input {
+    background-color: var(--soft-yellow); /* Soft yellow for input fields */
+    color: var(--dark-text); /* Dark text for input */
+    border: 2px solid var(--golden-yellow); /* Golden yellow border */
+    font-size: 2em;
+}
+
+body {
+    font-size: large;
+}
+
 ul {
     /* background: rgba(255,255,255,0.5); */
     display: flex;
     flex-direction: row;
-    border: so  
-
-li {
-    padding: 1em;
-    list-style: none;
-
-
-}
-
-body {
-    font-size:large;
-    3
-}
-
-
-input {                                                                    
-
-
-
-
-    font-size:2em;
-
-
-
 }

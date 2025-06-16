@@ -29,12 +29,7 @@
 </head>
 <body style="background-color:rgb(246, 255, 0);font-size: 2em; font-family: Charter, Arial;">
 
-  <h1>My Web Page</h1>
-  <p>Welcome to my web page. I hope you enjoy your stay.</p>
-
-  <p>
-    HI MY NAME IS <a href="https://www.roblox.com/users/1021169979/profile">Otherguy2222</a>. THIS IS MY WEBSITE
-  </p>
+  <h1>Welcome to otherguystudios!</h1>
 
   <h2>Pages</h2>
   <hr/>       
@@ -42,45 +37,12 @@
   <ul>
     <li><a href="roblox/Roblox.html">Roblox</a></li>
     <li><a href="/updates/Updates_planes.html">Updates/Plans</a></li>
+    <li><a href="/events/events.html">Events</a></li>
   </ul>
 
 
 
-  
- <div id="timer">
-    <h2>My Birthday is in</h2>
-    <p id="countdown"></p>
-  </div>
 
-   <script>
-    // Set the date we're counting down to
-    var countdownDate = new Date("june 15, 2025 1:00").getTime();
-
-    // Update the countdown every 1 second
-    var x = setInterval(function() {
-
-      // Get the current time
-      var now = new Date().getTime();
-      
-      // Calculate the distance between now and the countdown date
-      var distance = countdownDate - now;
-      
-      // Time calculations for days, hours, minutes, and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      // Display the result in the element with id="countdown"
-      document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-      // If the countdown is finished, display a message
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "Its my birthday!";
-      }
-    }, 1000);
-  </script> 
-
+ 
 </body>
 </html>
