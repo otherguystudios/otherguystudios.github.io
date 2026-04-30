@@ -39,11 +39,11 @@
   <H1> OTHERGUY STUDIOS</H1>  
 
   <h2 id="countdown">
-    10
+    3
   </h2>
   <script type="text/javascript">
     const el = document.getElementById('countdown')
-    let count = 10;
+    let count = 3;
     const counter = setInterval(function() { 
       count = count - 1;
 
@@ -77,8 +77,15 @@
   // Create a cube
   const geometry = new THREE.BoxGeometry();
 
-  const material = new THREE.MeshBasicMaterial({ color: 0xffff00 });
-  const cube = new THREE.Mesh(geometry, material);
+  const materials = [
+  new THREE.MeshBasicMaterial({ color: 0xff0000 }), // right - red
+  new THREE.MeshBasicMaterial({ color: 0x00ff00 }), // left - green
+  new THREE.MeshBasicMaterial({ color: 0x0000ff }), // top - blue
+  new THREE.MeshBasicMaterial({ color: 0xffff00 }), // bottom - yellow
+  new THREE.MeshBasicMaterial({ color: 0xff00ff }), // front - magenta
+  new THREE.MeshBasicMaterial({ color: 0x00ffff })  // back - cyan
+];
+  const cube = new THREE.Mesh(geometry, materials);
   scene.add(cube);
 
   // Move the camera back so we can see the cube
@@ -106,9 +113,9 @@
     camera.updateProjectionMatrix();
   });
 </script>
-<h2>If you are stuck on this page press refresh</h2>
+<!--<h2>If you are stuck on this page press refresh</h2>
 <h2>if its still not loading press <a href="home.html">This</a></h2>
-
+-->
 
 </body>
 </htm
