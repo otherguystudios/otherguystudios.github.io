@@ -15,6 +15,7 @@ svg {
 body {
     background-color: var(--bright-yellow); /* Bright yellow background */
     color: var(--dark-text); /* Dark text for contrast */
+    font-size: 2em; font-family: Charter Arial
 }
 
 h1 {
@@ -49,4 +50,5 @@ ul {
     /* background: rgba(255,255,255,0.5); */
     display: flex;
     flex-direction: row;
+
 }

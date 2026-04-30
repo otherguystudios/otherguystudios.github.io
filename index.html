@@ -1,30 +1,57 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title> Otherguy Studios </title>	
+     <style>
+        .blink {
+            animation: blink-animation 1s steps(5, start) infinite;
+        }
 
-  <!-- Open Graph (og) share settings. title/description/photo  -->
-  <meta property="og:title" content="Otherguy Studios" />
-  <meta property="og:description" content="Other guy studios is ... " />
-  <meta property="og:image" content="/404_github.png" />
-  <meta property="og:type" content="website" />
-
-  <!-- default configuration for stylesheet, viewport, icon path -->  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="/favicon.png"/>
-  <link rel="stylesheet" type="text/css" href="/style.css" />
+        @keyframes blink-animation {
+            0%, 100% {
+                visibility: visible;
+            }
+            50% {
+                visibility: hidden;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3;url=/home.html" />
+    <title>Welcome to otherguystudios</title>
 </head>
-
-<body style="background-color:rgb(246, 255, 0);font-size: 2em; font-family: Charter Arial;"></body>
-  <h1>
-The new otherguystudios is coming soon...
-  </h1>
+<body style="background-color:rgb(255, 242, 0);font-size: 2em; font-family: Charter Arial;"></body>
 
 
+<style>
+    /* Add some basic styling for the countdown timer */
+    #timer {
+      font-size: 2em;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+   <div id="timer">
+    <h2 class="blink">Otherguystudios </h2>
+    <h2 class="blink">On 3 </h2>
 
-  <p>More info coming soon...</p>
-<h2> <a href="home.html">ok</a></h2>
+</div>
   
+
+  <!--  <h2>News:</h2>
+<h2> A new page showing updates/plans click <a href="/updates/Updates_planes.html">"Here!"</a> </h2>
+
+<h2> Go check out the    <a href="archive/Archive.html">Archive</a>  </h2> 
+
+
+<h2>The Blog has been removed <a href="/updates/Blog_removed.html">Learn more</a></h2>
+
+
+
+<h2>dont got the time <a href="home.html">Go Home</a> faster</h2> 
+
+-->
 </body>
 </html>
